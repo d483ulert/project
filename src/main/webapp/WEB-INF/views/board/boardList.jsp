@@ -8,6 +8,12 @@
 </head>
 <body>
 
-boardList
+<table>
+</table>
+
 </body>
+
+<script type="javascript">
+
+</script>
 </html>

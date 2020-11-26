@@ -13,7 +13,7 @@ public class BoradController {
 	public String boardList() {
 	
 		
-		return "/boardList";
+		return "board/boardList";
 	}
 	
 	
