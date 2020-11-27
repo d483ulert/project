@@ -8,7 +8,7 @@
 <title>sgsgy</title>
 <link rel="stylesheet" type="text/css" href="src/webapp/resources/css/bootstrap.css" />
 <script src="src/webapp/resources/js/bootstrap.js"></script>
-<script type="javascript">
+<script>
 	location.href="/board/list";
 </script>
 
