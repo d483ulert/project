@@ -1,4 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,14 +21,15 @@
 			<th>수정날짜</th>
 		</tr>
 		</thead>
+		<c:forEach items="{vo}" var="board">
 		<tr>
-			<th>ㅇㅇ</th>
-			<th>ㅇㅇ</th>
-			<th>ㅇㅇ</th>
-			<th>ㅇㅇ</th>
-			<th>ㅇㅇ</th>
+			<td>${board.bno}</td>
+			<td>${board.title}</td>
+			<td>${board.writer}</td>
+			<td>${board.regdate}</td>
+			<td>${board.updatedate}</td>
 		</tr>
-		
+		</c:forEach>
 	</table>
 
 </body>

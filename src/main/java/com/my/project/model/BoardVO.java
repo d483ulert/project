@@ -1,7 +1,5 @@
 package com.my.project.model;
-
 import java.util.Date;
-
 import lombok.Data;
 
 @Data

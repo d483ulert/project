@@ -6,21 +6,28 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.my.project.dao.BoardDAO;
 import com.my.project.model.BoardVO;
+import com.my.project.service.BoardService;
 
 @Controller
 @RequestMapping("/board")
 public class BoradController {
 
-	@Autowired
-	BoardVO boardvo;
 	
+	BoardVO vo = new BoardVO();
+	@Autowired
+	BoardDAO dao;
+	@Autowired
+	BoardService bs;
+
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public String boardList(Model model) {
+	public String boardList(Model model) throws Exception {
 		
-		model.addAttribute(boardvo);
+		model.addAttribute("vo",bs.getList());
 		
 		return "board/boardList";
+		
 	}
 	
 	
