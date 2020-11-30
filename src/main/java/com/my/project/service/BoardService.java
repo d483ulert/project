@@ -8,5 +8,6 @@ import com.my.project.model.BoardVO;
 
 public interface BoardService {
 
-	public List<BoardVO> getList() throws Exception;
+	public List<BoardVO> getList(BoardVO vo) throws Exception;
+
 }

@@ -6,7 +6,7 @@ import com.my.project.model.BoardVO;
 
 public interface BoardDAO {
 	
-	public List<BoardVO> getList() throws Exception;
+	public List<BoardVO> getList(BoardVO boardvo) throws Exception;
 	
 
 }

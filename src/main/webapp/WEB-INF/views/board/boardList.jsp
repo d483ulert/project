@@ -11,27 +11,24 @@
 <title>BOARD</title>
 </head>
 <body>
-	<table class="table table-bordered" >
-		<thead>
-		<tr>
-			<th>글번호</th>
-			<th>제목</th>
-			<th>글쓴이</th>
-			<th>날짜</th>
-			<th>수정날짜</th>
-		</tr>
-		</thead>
-		<c:forEach items="{vo}" var="board">
-		<tr>
-			<td>${board.bno}</td>
-			<td>${board.title}</td>
-			<td>${board.writer}</td>
-			<td>${board.regdate}</td>
-			<td>${board.updatedate}</td>
-		</tr>
-		</c:forEach>
-	</table>
-
+	<div class="container">
+		<table class="table table-bordered" >
+			<tr>
+				<th>글번호</th>
+				<th>제목</th>
+				<th>글쓴이</th>
+				<th>날짜</th>
+			</tr>
+				<c:forEach items="${vo}" var="board">
+					<tr>
+						<td>${board.bno}</td>
+						<td>${board.title}</td>
+						<td>${board.writer}</td>
+						<td>${board.regdate}</td>
+					</tr>
+				</c:forEach>
+		</table>
+	</div>
 </body>
 
 <script type="javascript">

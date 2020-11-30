@@ -4,16 +4,16 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="Board">
-
 <select id ="boardlist" resultType="com.my.project.model.BoardVO">
 	SELECT 	BNO,
 			TITLE,
 			CONTENT,
 			WRITER,
-			TO_CHAR(REGDATE,'YYYY-MM-DD'),
-			TO_CHAR(UPDATEDATE,'YYYY-MM-DD')
+			TO_CHAR(REGDATE,'YYYY-MM-DD HH:MI:SS') REGDATE,
+			TO_CHAR(UPDATEDATE,'YYYY-MM-DD HH:MI:SS') UPDATEDATE
 	FROM BOARD
 	ORDER BY BNO DESC
 </select>
 
 </mapper>
+
