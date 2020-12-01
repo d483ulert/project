@@ -27,4 +27,11 @@ public class BoradController {
 	
 		return "board/boardList";
 	}	
+	
+	@RequestMapping(value="/write")
+	public String boardWrite(Model model,BoardVO vo) throws Exception{
+		
+		
+		return "board/boardWrite";
+	}
 }

@@ -15,5 +15,10 @@
 	ORDER BY BNO DESC
 </select>
 
+<!-- <insert id="boardwrite" >
+	INSERT INTO BOARD (BNO,TITLE,CONTENT,WRITER,REGDATE,UPDATEDATE)
+	VALUES()
+</insert> -->
+
 </mapper>
 
