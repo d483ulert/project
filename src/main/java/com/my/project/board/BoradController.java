@@ -21,7 +21,7 @@ public class BoradController {
 	BoardService bs;
 
 	@RequestMapping(value = "/list")
-	public String boardList(Model model, BoardVO vo) throws Exception {
+	public String boardList(Model model,BoardVO vo) throws Exception {
 		List<BoardVO> list = bs.getList(vo);
 		model.addAttribute("vo", list);
 	

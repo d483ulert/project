@@ -14,7 +14,7 @@ public class BoardDAOImpl implements BoardDAO{
 	SqlSession session;  // Cannot make a static reference to the non-static method selectList(String, Object) from the type SqlSession 
 
 	@Override
-	public List<BoardVO> getList(BoardVO boardvo) throws Exception {
+	public List<BoardVO> getList(BoardVO vo) throws Exception {
 
 		 return session.selectList("Board.boardlist");
 		

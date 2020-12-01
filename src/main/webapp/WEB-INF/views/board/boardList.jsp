@@ -19,14 +19,16 @@
 				<th>글쓴이</th>
 				<th>날짜</th>
 			</tr>
-				<c:forEach items="${vo}" var="board">
+				<c:forEach var="board" items="${vo}">
 					<tr>
 						<td>${board.bno}</td>
-						<td>${board.title}</td>
+		 				<td>${board.title}</td>
+						<td>${board.content}</td>						
 						<td>${board.writer}</td>
 						<td>${board.regdate}</td>
+						<td>${board.updatedate}</td> 
 					</tr>
-				</c:forEach>
+				</c:forEach> 
 		</table>
 	</div>
 </body>
