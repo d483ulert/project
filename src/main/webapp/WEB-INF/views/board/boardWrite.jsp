@@ -13,44 +13,23 @@
 <body>
 	<div class="container">
 		<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-			<a class="navbar-brand" href="/board/boardList.jsp">공지사항</a>		
+			<a class="navbar-brand" href="/board/list">공지사항</a>		
 			<a class="navbar-brand" href="#">Navbar</a>		
 			<a class="navbar-brand" href="#">Navbar</a>		
-			<a class="navbar-brand" href="#">Navbar</a>		
-			
+			<a class="navbar-brand" href="#">Navbar</a>	
 		</nav>
 	</div><br>
 	<div class="container">
-		<table class="table table-bordered" >
-			<tr>
-				<th>글번호</th>
-				<th>제목</th>
-				
-				
-				<th>글쓴이</th>
-				<th>날짜</th>
-				<th>등록일</th>
-				<th>최종수정</th>
-			</tr>
-				<c:forEach var="board" items="${vo}">
-					<tr>
-						<td>${board.bno}</td>
-		 				<td>${board.title}</td>
-						<td>${board.content}</td>						
-						<td>${board.writer}</td>
-						<td>${board.regdate}</td>
-						<td>${board.updatedate}</td> 
-					</tr>
-				</c:forEach> 
-		</table>
+		<form class="text-center" method="post" >
+			<label for="exampleFormControlInput1">제목</label>
+			<input type="text" name="title" required style="width:820px;">
+			<label for="exampleFormControlInput1">작성자</label>
+			<input type="text" name="writer" width="30" required>
+			<textarea class="textarea" name="content" rows="20" cols="155"></textarea><br>
+			<button type="submit" class="btn float-right btn-outline-secondary">등록</button>
+		</form>
 	</div>
-	<div class="container">
-		<div class="container-fluid full-width">
-			<button type="button" class="btn float-right btn-outline-secondary">글쓰기</button>
-		</div>
-	</div>
-</body>
-
+</body>  
 <script type="javascript">
 
 </script>

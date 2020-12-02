@@ -13,11 +13,10 @@
 <body>
 	<div class="container">
 		<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-			<a class="navbar-brand" href="/board/boardList.jsp">공지사항</a>		
+			<a class="navbar-brand" href="/board/list">공지사항</a>		
 			<a class="navbar-brand" href="#">Navbar</a>		
 			<a class="navbar-brand" href="#">Navbar</a>		
 			<a class="navbar-brand" href="#">Navbar</a>		
-			
 		</nav>
 	</div><br>
 	<div class="container">
@@ -25,8 +24,6 @@
 			<tr>
 				<th>글번호</th>
 				<th>제목</th>
-				
-				
 				<th>글쓴이</th>
 				<th>날짜</th>
 				<th>등록일</th>
@@ -46,7 +43,7 @@
 	</div>
 	<div class="container">
 		<div class="container-fluid full-width">
-			<button type="button" class="btn float-right btn-outline-secondary">글쓰기</button>
+			<button type="button" class="btn float-right btn-outline-secondary"><a href="/board/write">글쓰기</button>
 		</div>
 	</div>
 </body>
