@@ -15,10 +15,11 @@
 	ORDER BY BNO DESC
 </select>
 
-<!-- <insert id="boardwrite" >
-	INSERT INTO BOARD (BNO,TITLE,CONTENT,WRITER,REGDATE,UPDATEDATE)
-	VALUES()
-</insert> -->
+<insert id="boardwrite" >
+	INSERT INTO BOARD
+	(BNO,TITLE,WRITER,CONTENT,REGDATE,UPDATEDATE)
+	VALUES(SEQ_BNO.NEXTVAL,#{TITLE},#{WRITER},#{CONTENT},SYSDATE,SYSDATE)
+</insert> 
 
 </mapper>
 

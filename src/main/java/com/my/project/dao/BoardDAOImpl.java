@@ -20,4 +20,11 @@ public class BoardDAOImpl implements BoardDAO{
 		
 	}
 
+	@Override
+	public void write(BoardVO vo) throws Exception {
+		// TODO Auto-generated method stub
+		session.insert("Board.boardwrite");
+		
+	}
+
 }

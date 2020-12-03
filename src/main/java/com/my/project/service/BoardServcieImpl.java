@@ -19,4 +19,14 @@ public class BoardServcieImpl implements BoardService{
 		return dao.getList(vo);
 	}
 
+	@Override
+	public void write(BoardVO vo) {
+		try {
+			dao.write(vo);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 }

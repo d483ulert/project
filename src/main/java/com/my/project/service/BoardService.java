@@ -10,4 +10,7 @@ public interface BoardService {
 
 	public List<BoardVO> getList(BoardVO vo) throws Exception;
 
+	public void write(BoardVO vo);
+
+
 }

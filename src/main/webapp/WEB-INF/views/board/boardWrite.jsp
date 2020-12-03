@@ -20,13 +20,14 @@
 		</nav>
 	</div><br>
 	<div class="container">
-		<form class="text-center" method="post" >
+		<form action="/insert" class="text-center" method="post" >
 			<label for="exampleFormControlInput1">제목</label>
 			<input type="text" name="title" required style="width:820px;">
 			<label for="exampleFormControlInput1">작성자</label>
 			<input type="text" name="writer" width="30" required>
 			<textarea class="textarea" name="content" rows="20" cols="155"></textarea><br>
 			<button type="submit" class="btn float-right btn-outline-secondary">등록</button>
+			
 		</form>
 	</div>
 </body>  
