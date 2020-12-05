@@ -4,6 +4,12 @@ package com.my.project.model;
 public class BoardVO {
 
 	private  int bno;
+	private  String title;
+	private  String content;
+	private  String writer;
+	private  String regdate;
+	private  String updatedate;
+	
 	public int getBno() {
 		return bno;
 	}
@@ -40,9 +46,4 @@ public class BoardVO {
 	public void setUpdatedate(String updatedate) {
 		this.updatedate = updatedate;
 	}
-	private  String title;
-	private  String content;
-	private  String writer;
-	private  String regdate;
-	private  String updatedate;
 }

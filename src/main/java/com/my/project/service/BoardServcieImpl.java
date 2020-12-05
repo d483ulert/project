@@ -20,13 +20,8 @@ public class BoardServcieImpl implements BoardService{
 	}
 
 	@Override
-	public void write(BoardVO vo) {
-		try {
-			dao.write(vo);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public void write(BoardVO vo) throws Exception {
+		dao.write(vo);
 	}
 
 }

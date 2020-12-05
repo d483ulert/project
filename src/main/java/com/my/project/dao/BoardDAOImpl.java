@@ -23,7 +23,7 @@ public class BoardDAOImpl implements BoardDAO{
 	@Override
 	public void write(BoardVO vo) throws Exception {
 		// TODO Auto-generated method stub
-		session.insert("Board.boardwrite");
+		session.insert("Board.boardwrite",vo);  // List에는 vo 객체를 안 넣어도 되지만 write는 넣어줘야한다.
 		
 	}
 

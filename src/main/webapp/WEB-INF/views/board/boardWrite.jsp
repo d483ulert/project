@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html>
@@ -20,7 +21,7 @@
 		</nav>
 	</div><br>
 	<div class="container">
-		<form action="/insert" class="text-center" method="post" >
+		<form action="${cp}/board/insert" method="post" >
 			<label for="exampleFormControlInput1">제목</label>
 			<input type="text" name="title" required style="width:820px;">
 			<label for="exampleFormControlInput1">작성자</label>

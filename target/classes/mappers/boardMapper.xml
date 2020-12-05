@@ -5,6 +5,7 @@
   
 <mapper namespace="Board">
 <select id ="boardlist" resultType="com.my.project.model.BoardVO">
+ /*boardList*/
 	SELECT 	BNO,
 			TITLE,
 			CONTENT,
@@ -16,9 +17,10 @@
 </select>
 
 <insert id="boardwrite" >
+  /*boardWrite*/
 	INSERT INTO BOARD
 	(BNO,TITLE,WRITER,CONTENT,REGDATE,UPDATEDATE)
-	VALUES(SEQ_BNO.NEXTVAL,#{TITLE},#{WRITER},#{CONTENT},SYSDATE,SYSDATE)
+	VALUES(SEQ_BNO.NEXTVAL,#{title},#{writer},#{content},SYSDATE,SYSDATE)
 </insert> 
 
 </mapper>
