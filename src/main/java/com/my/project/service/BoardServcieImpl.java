@@ -24,4 +24,10 @@ public class BoardServcieImpl implements BoardService{
 		dao.write(vo);
 	}
 
+	@Override
+	public List<BoardVO> getRead(BoardVO vo) throws Exception {
+		dao.getRead(vo);
+		return null;
+	}
+
 }

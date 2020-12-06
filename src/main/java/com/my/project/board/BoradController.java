@@ -51,4 +51,11 @@ public class BoradController {
 		return "redirect:/board/list";  // redirect에는 /board/list까지 적어야함 최상위 RequestMapping value까지포함하여. 
 	}
 	
+	@RequestMapping(value="/read")
+	public String boardRead(BoardVO vo, Model model) throws Exception{
+		List<BoardVO> list= bs.getRead(vo);
+		model.addAttribute("board",list);
+		return "board/boardRead";
+	}
+	
 }

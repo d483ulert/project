@@ -43,7 +43,7 @@
 	</div>
 	<div class="container">
 		<div class="container-fluid full-width">
-			<button type="button" class="btn float-right btn-outline-secondary"><a href="/board/write">글쓰기</button>
+			<button type="button" class="btn float-right btn-outline-secondary"><a href="/board/write">글쓰기</a></button>
 		</div>
 	</div>
 </body>
