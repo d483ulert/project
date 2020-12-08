@@ -28,7 +28,7 @@
 				<th>시간</th>
 				<th>내용</th>
 			</tr>
-				<c:forEach var="board" items="${vo}">
+			<c:forEach var="board" items="${vo}">
 				<tr>
 					<td>${board.title}</td>
 					<td>${board.writer}</td>						

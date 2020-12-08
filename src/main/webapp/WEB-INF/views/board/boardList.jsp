@@ -8,6 +8,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="/resources/js/jquery-1.7.2.min.js"/>
+
 <title>BOARD</title>
 </head>
 <body>
@@ -31,7 +33,7 @@
 				<c:forEach var="board" items="${vo}">
 					<tr style="text-align:center;">
 						<td width="20%">${board.bno}</td>
-		 				<td width="50%"><a href="/board/write"></a>${board.title}</td>
+		 				<td width="50%"><a href="${cp}/board/read?bno=${board.bno}">${board.title}</a></td>
 						<td width="10%">${board.writer}</td>
 						<td width="10%">${board.regdate}</td>
 						<td width="10%">${board.updatedate}</td> 
@@ -47,7 +49,12 @@
 
 </body>
 
-<script type="javascript">
+<script type="text/javascript">
+/* $(".")
+
+function(){
+	
+} */
 
 </script>
 </html>
