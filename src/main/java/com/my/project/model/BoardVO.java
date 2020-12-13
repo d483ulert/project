@@ -3,12 +3,27 @@ package com.my.project.model;
 
 public class BoardVO {
 
-	private  int bno;
-	private  String title;
-	private  String content;
-	private  String writer;
-	private  String regdate;
-	private  String updatedate;
+	private int bno;
+	private String title;
+	private String content;
+	private String writer;
+	private String regdate;
+	private String updatedate;
+	private int recommend;
+	private int inquiry;
+
+	public int getRecommend() {
+		return recommend;
+	}
+	public void setRecommend(int recommend) {
+		this.recommend = recommend;
+	}
+	public int getInquiry() {
+		return inquiry;
+	}
+	public void setInquiry(int inquiry) {
+		this.inquiry = inquiry;
+	}
 	
 	public int getBno() {
 		return bno;

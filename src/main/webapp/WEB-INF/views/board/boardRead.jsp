@@ -27,14 +27,22 @@
 				<th>글쓴이</th>
 				<th>시간</th>
 				<th>내용</th>
+				<th>조회수</th>
+				<th>추천수</th>
 			</tr>
 				<tr>
 					<td>${board.title}</td>
 					<td>${board.writer}</td>						
 					<td>${board.regdate}</td>
 					<td>${board.content}</td>
+					<td>${board.recommend}</td>
+					<td>${board.inquiry} </td> 
 				</tr>
 		</table>
+	</div>
+	<div class="container">
+		<button type="button" class="btn float-right btn-outline-secondary" id="update" style="margin-left:20px">수정</button>
+		<button type="button" class="btn float-right btn-outline-secondary" id="recommend">추천</button>
 	</div>
 </body>
 </html>

@@ -11,7 +11,9 @@
 			CONTENT,
 			WRITER,
 			TO_CHAR(REGDATE,'YYYY-MM-DD HH:MI:SS') REGDATE,
-			TO_CHAR(UPDATEDATE,'YYYY-MM-DD HH:MI:SS') UPDATEDATE
+			TO_CHAR(UPDATEDATE,'YYYY-MM-DD HH:MI:SS') UPDATEDATE,
+			RECOMMEND,
+			INQUIRY
 	FROM BOARD
 	ORDER BY BNO DESC
 </select>
@@ -25,7 +27,36 @@
 
 
 <select id ="boardread" resultType="com.my.project.model.BoardVO">
-	SELECT BNO,TITLE,WRITER,CONTENT,REGDATE FROM BOARD WHERE BNO = #{BNO}
+	SELECT BNO,TITLE,WRITER,CONTENT,REGDATE,RECOMMEND,INQUIRY 
+	FROM BOARD WHERE BNO = #{BNO}
 </select>
+
+<update id="recommend" parameterType="com.my.project.model.BoardVO">
+UPDATE BOARD 
+SET
+RECOMMEND = NVL(RECOMMEND,0)+1
+WHERE RECOMMEND= ${RECOMMEND}
+</update>
+
+<update id="boardupdate" parameterType="com.my.project.model.BoardVO">
+UPDATE BOARD
+SET
+TITLE = #{TITLE},
+CONTENT = #{CONTENT},
+UPDATEDATE = SYSDATE
+WHERE BNO= #{BNO}
+</update>
+
+<update id="boardinquiry" parameterType="com.my.project.model.BoardVO">
+UPDATE BOARD 
+SET
+INQUIRY = NVL(INQUIRY,0)+1
+WHERE INQUIRY= ${INQUIRY}
+</update>
+
+<delete id="boarddelete" parameterType="int">
+DELETE FROM BOARD
+WHERE BNO =#{BNO}
+</delete>
 </mapper>
 
