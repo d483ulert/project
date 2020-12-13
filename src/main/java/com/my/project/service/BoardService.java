@@ -12,5 +12,5 @@ public interface BoardService {
 
 	public void write(BoardVO vo) throws Exception;
 
-	public List<BoardVO> getRead(BoardVO vo) throws Exception;
+	public BoardVO getRead(int bno) throws Exception;
 }

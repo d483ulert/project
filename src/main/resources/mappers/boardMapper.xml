@@ -25,7 +25,7 @@
 
 
 <select id ="boardread" resultType="com.my.project.model.BoardVO">
-	SELECT BNO,TITLE,CONTENT FROM BOARD WHERE BNO = #{BNO}
+	SELECT BNO,TITLE,CONTENT,REGDATE FROM BOARD WHERE BNO = #{BNO}
 </select>
 </mapper>
 

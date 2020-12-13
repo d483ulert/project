@@ -28,8 +28,8 @@ public class BoardDAOImpl implements BoardDAO{
 	}
 
 	@Override
-	public List<BoardVO> getRead(BoardVO vo) throws Exception {
-		return session.selectList("Board.boardread");
+	public BoardVO getRead(int bno) throws Exception {
+		return session.selectOne("Board.boardread",bno);
 	}
 
 }
