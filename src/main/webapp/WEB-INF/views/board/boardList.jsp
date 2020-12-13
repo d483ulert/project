@@ -32,11 +32,11 @@
 			</tr>
 				<c:forEach var="board" items="${vo}">
 					<tr style="text-align:center;">
-						<td width="20%">${board.bno}</td>
-		 				<td width="50%"><a href="${cp}/board/read?bno=${board.bno}">${board.title}</a></td>
-						<td width="10%">${board.writer}</td>
-						<td width="10%">${board.regdate}</td>
-						<td width="10%">${board.updatedate}</td> 
+						<td width="10%">${board.bno}</td>
+		 				<td width="45%"><a href="${cp}/board/read?bno=${board.bno}">${board.title}</a></td>
+						<td width="15%">${board.writer}</td>
+						<td width="15%">${board.regdate}</td>
+						<td width="15%">${board.updatedate}</td> 
 					</tr>
 				</c:forEach> 
 		</table>

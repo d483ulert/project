@@ -28,14 +28,12 @@
 				<th>시간</th>
 				<th>내용</th>
 			</tr>
-			<c:forEach var="board" items="${vo}">
 				<tr>
 					<td>${board.title}</td>
 					<td>${board.writer}</td>						
 					<td>${board.regdate}</td>
 					<td>${board.content}</td>
 				</tr>
-			</c:forEach> 
 		</table>
 	</div>
 </body>

@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.my.project.dao.BoardDAO;
 import com.my.project.model.BoardVO;
@@ -52,9 +53,9 @@ public class BoradController {
 	}
 	
 	@RequestMapping(value="/read")
-	public String boardRead(BoardVO vo, Model model) throws Exception{
-		List<BoardVO> list= bs.getRead(vo);
-		model.addAttribute("board",list);
+	public String boardRead(BoardVO vo, Model model,@RequestParam int bno) throws Exception{
+		BoardVO list= bs.getRead(bno);
+		model.addAttribute("board",list); //Don't know how to iterate over supplied "items" in &lt;forEach&gt; list가아닌데 list로 보내줘서 생긴문제
 		return "board/boardRead";
 	}
 	
