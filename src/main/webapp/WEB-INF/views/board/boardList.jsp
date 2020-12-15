@@ -29,18 +29,18 @@
 				<th>글쓴이</th>
 				<th>등록일</th>
 				<th>최종수정</th>
-				<th>조회수</th>
-				<th>추천수</th>
+				<th>조회</th>
+				<th>추천</th>
 			</tr>
 				<c:forEach var="board" items="${vo}">
 					<tr style="text-align:center;">
-						<td width="5%">${board.bno}</td>
-		 				<td width="40%"><a href="${cp}/board/read?bno=${board.bno}">${board.title}</a></td>
-						<td width="15%">${board.writer}</td>
-						<td width="15%">${board.regdate}</td>
-						<td width="15%">${board.updatedate}</td> 
-						<td width="5%" >${board.recommend}</td>
-						<td width="5%">${board.inquiry} </td> 
+						<td width="10%">${board.bno}</td>
+		 				<td width="46%"><a href="${cp}/board/read?bno=${board.bno}">${board.title}</a></td>
+						<td width="10%">${board.writer}</td>
+						<td width="10%">${board.regdate}</td>
+						<td width="10%">${board.updatedate}</td> 
+						<td width="7%" >${board.recommend}</td>
+						<td width="7%">${board.inquiry} </td> 
 					</tr>
 				</c:forEach> 
 		</table>
