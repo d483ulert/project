@@ -61,6 +61,11 @@
 			location.href='${cp}/board/delete?bno=${board.bno}';
 		}
 	});
+	
+	$('#update').click(function(){
+		var cf = confirm("수정하시겠습니까?");
+		location.href='${cp}/board/update?bno=${board.bno}';
+	});
 
 </script>
 </html>

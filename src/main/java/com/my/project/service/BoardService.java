@@ -15,4 +15,6 @@ public interface BoardService {
 	public BoardVO getRead(int bno) throws Exception;
 	
 	public void delete(int bno) throws Exception;
+	
+	public void update(BoardVO vo) throws Exception;
 }

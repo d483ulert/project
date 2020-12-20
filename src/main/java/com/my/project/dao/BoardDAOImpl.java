@@ -36,4 +36,11 @@ public class BoardDAOImpl implements BoardDAO{
 		session.delete("Board.boarddelete",bno);
 	}
 
+	@Override
+	public void update(BoardVO vo) throws Exception {
+		session.update("Board.boardupdate",vo);
+		
+	}
+
+	
 }
