@@ -13,4 +13,6 @@ public interface BoardService {
 	public void write(BoardVO vo) throws Exception;
 
 	public BoardVO getRead(int bno) throws Exception;
+	
+	public void delete(int bno) throws Exception;
 }

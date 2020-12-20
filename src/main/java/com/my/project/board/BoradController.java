@@ -58,5 +58,11 @@ public class BoradController {
 		model.addAttribute("board",list); //Don't know how to iterate over supplied "items" in &lt;forEach&gt; list가아닌데 list로 보내줘서 생긴문제
 		return "board/boardRead";
 	}
+	@RequestMapping(value="/delete")
+	public String boardDelete(Model model,@RequestParam int bno) throws Exception{
+		bs.delete(bno);
+		model.addAttribute(bno);
+		return "redirect:/board/list";
+	}
 	
 }

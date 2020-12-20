@@ -8,9 +8,10 @@ public interface BoardDAO {
 	
 	public List<BoardVO> getList(BoardVO vo) throws Exception;
 	
-
 	public void write(BoardVO vo) throws Exception;	
 	
 	public BoardVO getRead(int bno) throws Exception;
+	
+	public void delete(int bno) throws Exception;
 
 }

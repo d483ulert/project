@@ -61,8 +61,7 @@ WHERE INQUIRY= ${INQUIRY}
 </update>
 
 <delete id="boarddelete" parameterType="int">
-DELETE FROM BOARD
-WHERE BNO =#{BNO}
+DELETE FROM BOARD WHERE BNO =#{BNO}
 </delete>
 </mapper>
 

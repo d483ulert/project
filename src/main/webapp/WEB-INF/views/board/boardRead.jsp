@@ -9,7 +9,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="/resources/js/jquery-1.7.2.min.js"/>
+<script src="/resources/js/jquery-1.7.2.min.js"></script>
 
 <title>BOARD</title>
 </head>
@@ -42,7 +42,7 @@
 		
 	</div>
 	<div class="container">
-		<button type="button" class="btn float-right btn-outline-secondary" id="delte" style="margin-left:10px">삭제</button>
+		<button type="button" class="btn float-right btn-outline-secondary" id="delete" style="margin-left:10px">삭제</button>
 		<button type="button" class="btn float-right btn-outline-secondary" id="update" style="margin-left:10px">수정</button>
 		<button type="button" class="btn float-right btn-outline-secondary" id="recommend" style="margin-left:10px">추천</button>
 		<button type="button" class="btn float-left btn-outline-secondary" id="list" style="margin-left:10px">목록</button>
@@ -50,12 +50,17 @@
 	</div>
 </body>
 
-<script type="text/javascript">
-	function event(){
-		$('#list').click(function(){
-			location.href="/board/list";
-		});
-	}
+<script>
+	$('#list').click(function(){
+		location.href="/board/list";
+	});
 	
+	$('#delete').click(function(){
+		var cf = confirm("삭제하시겠습니까?");
+		if(cf){
+			location.href='${cp}/board/delete?bno=${board.bno}';
+		}
+	});
+
 </script>
 </html>
