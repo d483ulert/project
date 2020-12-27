@@ -65,17 +65,10 @@ public class BoradController {
 		return "redirect:/board/list";
 	}
 	
-	@RequestMapping(value="update")
+	@RequestMapping(value="/update")
 	public String boardUpdate(BoardVO vo, Model model,@RequestParam int bno) throws Exception {
-		model.addAttribute("updateView",bs.getRead(bno));
-		return "board/update";
+		model.addAttribute("board",bs.getRead(bno));
+		return "board/boardUpdate";
 	}
-	
-	@RequestMapping(value="/updateWrite")
-	public String boardUpdate1(Model model, @RequestParam int bno, BoardVO vo) throws Exception{
-		bs.update(vo);
-	
-		return "redirect:/board/write?bno";
-		
-	}
+
 }
