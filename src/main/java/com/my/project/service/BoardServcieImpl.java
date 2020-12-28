@@ -40,4 +40,9 @@ public class BoardServcieImpl implements BoardService{
 		dao.update(vo);
 	}
 
+	@Override
+	public void recommend(int recommend) throws Exception {
+		dao.recommend(recommend);
+	}
+
 }

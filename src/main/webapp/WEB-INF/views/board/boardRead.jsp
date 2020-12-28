@@ -44,7 +44,7 @@
 	<div class="container">
 		<button type="button" class="btn float-right btn-outline-secondary" id="delete" style="margin-left:10px">삭제</button>
 		<button type="button" class="btn float-right btn-outline-secondary" id="update" style="margin-left:10px">수정</button>
-		<button type="button" class="btn float-right btn-outline-secondary" id="recommend" style="margin-left:10px">추천</button>
+		<button type="button" class="btn float-right btn-outline-secondary" name="recommend" id="recommend" style="margin-left:10px" value="0">추천</button>
 		<button type="button" class="btn float-left btn-outline-secondary" id="list" style="margin-left:10px">목록</button>
 		<button type="button" class="btn float-right btn-outline-secondary" id="comend">답글쓰기</button>
 	</div>
@@ -68,6 +68,23 @@
 			location.href='${cp}/board/update?bno=${board.bno}';
 		}
 	});
-
+	 $('#recommend').click(function(){
+		var cf = confirm("추천하시겠습니까?");
+		if(cf){
+			recommend();	
+		}
+	});
+	
+	function recommend(){
+		$.ajax({
+			url:'${cp}/board/recommend',
+			type:'post',
+			data:$("#recommend"),
+			success:function(){
+				alert("추천되었습니다.");
+			}
+			
+		});
+	}; 
 </script>
 </html>

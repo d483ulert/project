@@ -42,5 +42,10 @@ public class BoardDAOImpl implements BoardDAO{
 		
 	}
 
+	@Override
+	public void recommend(int recommend) throws Exception {
+		session.update("Board.recommend",recommend);
+	}
+
 	
 }

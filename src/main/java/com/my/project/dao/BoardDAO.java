@@ -15,4 +15,6 @@ public interface BoardDAO {
 	public void delete(int bno) throws Exception;
 
 	public void update(BoardVO vo) throws Exception;
+	
+	public void recommend(int recommend) throws Exception;
 }

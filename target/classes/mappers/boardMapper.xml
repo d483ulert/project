@@ -40,8 +40,8 @@
 <update id="recommend" parameterType="com.my.project.model.BoardVO">
 UPDATE BOARD 
 SET
-RECOMMEND = NVL(RECOMMEND,0)+1
-WHERE RECOMMEND= ${RECOMMEND}
+recommend = recommend+1
+WHERE BNO = #{BNO}
 </update>
 
 <update id="boardupdate" parameterType="com.my.project.model.BoardVO">

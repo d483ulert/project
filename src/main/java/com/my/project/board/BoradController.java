@@ -70,5 +70,12 @@ public class BoradController {
 		model.addAttribute("board",bs.getRead(bno));
 		return "board/boardUpdate";
 	}
+	
+	@RequestMapping(value="/recommend")
+	public void boardRecommned(BoardVO vo, Model model, @RequestParam int recommend) throws Exception {
+		int rec = recommend;
+		System.out.println(rec);
+		bs.recommend(recommend);
+	}
 
 }
