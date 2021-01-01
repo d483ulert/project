@@ -41,8 +41,8 @@ public class BoardServcieImpl implements BoardService{
 	}
 
 	@Override
-	public void recommend(int recommend) throws Exception {
-		dao.recommend(recommend);
+	public void recommend(BoardVO vo) throws Exception {
+		dao.recommend(vo);
 	}
 
 }

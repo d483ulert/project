@@ -18,5 +18,5 @@ public interface BoardService {
 	
 	public void update(BoardVO vo) throws Exception;
 	
-	public void recommend(int recommend) throws Exception;
+	public void recommend(BoardVO vo) throws Exception;
 }

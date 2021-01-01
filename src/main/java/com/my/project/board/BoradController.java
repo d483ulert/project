@@ -1,5 +1,6 @@
 package com.my.project.board;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -71,11 +72,11 @@ public class BoradController {
 		return "board/boardUpdate";
 	}
 	
-	@RequestMapping(value="/recommend")
-	public void boardRecommned(BoardVO vo, Model model, @RequestParam int recommend) throws Exception {
-		int rec = recommend;
-		System.out.println(rec);
-		bs.recommend(recommend);
+	@RequestMapping(value="/recommend", method=RequestMethod.POST)
+	public void boardRecommned(BoardVO vo, Model model,@RequestParam int bno) throws Exception {
+		HashMap<String,String> map = new HashMap<String, String>();
+		System.out.println(map.get("bnoData"));
+		bs.recommend(vo);
 	}
 
 }

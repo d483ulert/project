@@ -43,8 +43,8 @@ public class BoardDAOImpl implements BoardDAO{
 	}
 
 	@Override
-	public void recommend(int recommend) throws Exception {
-		session.update("Board.recommend",recommend);
+	public void recommend(BoardVO vo) throws Exception {
+		session.update("Board.recommend",vo);
 	}
 
 	

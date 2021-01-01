@@ -76,14 +76,17 @@
 	});
 	
 	function recommend(){
+		var bnoData= {
+				recommend:$('#recommend').val(),
+		};
 		$.ajax({
-			url:'${cp}/board/recommend',
 			type:'post',
-			data:$("#recommend"),
+			url:'${cp}/board/recommend',
+			data:bnoData,
+			datatype:'json',
 			success:function(){
 				alert("추천되었습니다.");
 			}
-			
 		});
 	}; 
 </script>
