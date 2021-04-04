@@ -13,7 +13,7 @@
 			TO_CHAR(REGDATE,'YYYY-MM-DD HH:MI') REGDATE,
 			TO_CHAR(UPDATEDATE,'YYYY-MM-DD HH:MI') UPDATEDATE,
 			RECOMMEND,
-			INQUIRY
+			INVIEW
 	FROM BOARD
 	ORDER BY BNO DESC
 </select>
@@ -33,7 +33,7 @@
 			CONTENT,
 			TO_CHAR(REGDATE,'YYYY-MM-DD HH:MI') REGDATE,
 			RECOMMEND,
-			INQUIRY 
+			INVIEW 
 	FROM BOARD WHERE BNO = #{BNO}
 </select>
 
@@ -56,8 +56,8 @@ WHERE BNO= #{BNO}
 <update id="boardinquiry" parameterType="com.my.project.model.BoardVO">
 UPDATE BOARD 
 SET
-INQUIRY = NVL(INQUIRY,0)+1
-WHERE INQUIRY= ${INQUIRY}
+INQUIRY = NVL(INVIEW,0)+1
+WHERE INVIEW= ${INVIEW}
 </update>
 
 <delete id="boarddelete" parameterType="int">

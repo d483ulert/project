@@ -19,7 +19,7 @@ import com.my.project.service.BoardService;
 
 @Controller
 @RequestMapping("/board")
-public class BoradController {
+public class BoardController {
 
 	@Autowired
 	BoardDAO dao;
@@ -50,13 +50,13 @@ public class BoradController {
 	@RequestMapping(value="/insert", method=RequestMethod.POST)
 	public String boardWrite1(BoardVO vo) throws Exception{
 		bs.write(vo);
-		return "redirect:/board/list";  // redirectì—ëŠ” /board/listê¹Œì§€ ì ì–´ì•¼í•¨ ìµœìƒìœ„ RequestMapping valueê¹Œì§€í¬í•¨í•˜ì—¬. 
+		return "redirect:/board/list";  // redirect?—?Š” /board/listê¹Œì? ? ?–´?•¼?•¨ ìµœìƒ?œ„ RequestMapping valueê¹Œì??¬?•¨?•˜?—¬. 
 	}
 	
 	@RequestMapping(value="/read")
 	public String boardRead(BoardVO vo, Model model,@RequestParam int bno) throws Exception{
 		BoardVO list= bs.getRead(bno);
-		model.addAttribute("board",list); //Don't know how to iterate over supplied "items" in &lt;forEach&gt; listê°€ì•„ë‹Œë° listë¡œ ë³´ë‚´ì¤˜ì„œ ìƒê¸´ë¬¸ì œ
+		model.addAttribute("board",list); //Don't know how to iterate over supplied "items" in &lt;forEach&gt; listê°??•„?‹Œ?° listë¡? ë³´ë‚´ì¤˜ì„œ ?ƒê¸´ë¬¸? œ
 		return "board/boardRead";
 	}
 	@RequestMapping(value="/delete")

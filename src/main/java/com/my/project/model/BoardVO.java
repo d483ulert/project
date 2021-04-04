@@ -10,7 +10,7 @@ public class BoardVO {
 	private String regdate;
 	private String updatedate;
 	private int recommend;
-	private int inquiry;
+	private int inview;
 
 	public int getRecommend() {
 		return recommend;
@@ -18,11 +18,11 @@ public class BoardVO {
 	public void setRecommend(int recommend) {
 		this.recommend = recommend;
 	}
-	public int getInquiry() {
-		return inquiry;
+	public int getInview() {
+		return inview;
 	}
-	public void setInquiry(int inquiry) {
-		this.inquiry = inquiry;
+	public void setInview(int setInview) {
+		this.inview = inview;
 	}
 	
 	public int getBno() {
