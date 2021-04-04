@@ -22,7 +22,7 @@ public class BoardDAOImpl implements BoardDAO{
 
 	@Override
 	public void write(BoardVO vo) throws Exception {
-		session.insert("Board.boardwrite",vo);  // List에는 vo 객체를 안 넣어도 되지만 write는 넣어줘야한다.
+		session.insert("Board.boardwrite",vo);  // List�뿉�뒗 vo 媛앹껜瑜� �븞 �꽔�뼱�룄 �릺吏�留� write�뒗 �꽔�뼱以섏빞�븳�떎.
 		
 	}
 
@@ -45,6 +45,12 @@ public class BoardDAOImpl implements BoardDAO{
 	@Override
 	public void recommend(BoardVO vo) throws Exception {
 		session.update("Board.recommend",vo);
+	}
+
+	@Override
+	public void inview(BoardVO vo) throws Exception {
+		session.update("Board.boardinquiry", vo);
+		
 	}
 
 	

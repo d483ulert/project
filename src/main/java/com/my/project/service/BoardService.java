@@ -19,4 +19,7 @@ public interface BoardService {
 	public void update(BoardVO vo) throws Exception;
 	
 	public void recommend(BoardVO vo) throws Exception;
+
+	public BoardVO inview(BoardVO vo) throws Exception;
 }
+	

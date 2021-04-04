@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,24 +42,29 @@ public class BoardController {
 		return "board/boardList";
 	}	
 	
+	@Transactional
 	@RequestMapping("/write")
 	public String boardWrite() throws Exception{
 		
 		return "board/boardWrite";
 	}
 	
+	@Transactional
 	@RequestMapping(value="/insert", method=RequestMethod.POST)
 	public String boardWrite1(BoardVO vo) throws Exception{
 		bs.write(vo);
-		return "redirect:/board/list";  // redirect?—?Š” /board/listê¹Œì? ? ?–´?•¼?•¨ ìµœìƒ?œ„ RequestMapping valueê¹Œì??¬?•¨?•˜?—¬. 
+		return "redirect:/board/list";  // redirect?ï¿½ï¿½?ï¿½ï¿½ /board/listê¹Œï¿½? ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ ìµœìƒ?ï¿½ï¿½ RequestMapping valueê¹Œï¿½??ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½. 
 	}
 	
+	@Transactional
 	@RequestMapping(value="/read")
-	public String boardRead(BoardVO vo, Model model,@RequestParam int bno) throws Exception{
+	public String boardRead(BoardVO vo, Model model,@RequestParam int bno,@RequestParam String inview) throws Exception{
 		BoardVO list= bs.getRead(bno);
-		model.addAttribute("board",list); //Don't know how to iterate over supplied "items" in &lt;forEach&gt; listê°??•„?‹Œ?° listë¡? ë³´ë‚´ì¤˜ì„œ ?ƒê¸´ë¬¸? œ
+		BoardVO inview1 = bs.inview(inview1);
+		model.addAttribute("board",list); //Don't know how to iterate over supplied "items" in &lt;forEach&gt; listï¿½??ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ listï¿½? ë³´ë‚´ì¤˜ì„œ ?ï¿½ï¿½ê¸´ë¬¸?ï¿½ï¿½
 		return "board/boardRead";
 	}
+	@Transactional
 	@RequestMapping(value="/delete")
 	public String boardDelete(Model model,@RequestParam int bno) throws Exception{
 		bs.delete(bno);
@@ -66,12 +72,14 @@ public class BoardController {
 		return "redirect:/board/list";
 	}
 	
+	@Transactional
 	@RequestMapping(value="/update")
 	public String boardUpdate(BoardVO vo, Model model,@RequestParam int bno) throws Exception {
 		model.addAttribute("board",bs.getRead(bno));
 		return "board/boardUpdate";
 	}
 	
+	@Transactional
 	@RequestMapping(value="/recommend", method=RequestMethod.POST)
 	public void boardRecommned(BoardVO vo, Model model,@RequestParam int bno) throws Exception {
 		HashMap<String,String> map = new HashMap<String, String>();
