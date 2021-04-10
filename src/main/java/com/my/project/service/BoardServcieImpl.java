@@ -39,15 +39,16 @@ public class BoardServcieImpl implements BoardService{
 	public void update(BoardVO vo) throws Exception {
 		dao.update(vo);
 	}
-
-	public BoardVO inview(int inview) throws Exception{
-		return dao.inview(inview);
-;
-	}
 	
 	@Override
 	public void recommend(BoardVO vo) throws Exception {
 		dao.recommend(vo);
+	}
+
+	@Override
+	public BoardVO inview(int bno) throws Exception {
+		return dao.inview(bno);
+
 	}
 
 }

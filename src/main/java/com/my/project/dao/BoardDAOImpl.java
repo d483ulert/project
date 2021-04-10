@@ -48,10 +48,11 @@ public class BoardDAOImpl implements BoardDAO{
 	}
 
 	@Override
-	public void inview(BoardVO vo) throws Exception {
-		session.update("Board.boardinquiry", vo);
-		
+	public BoardVO inview(int bno) throws Exception {
+		// TODO Auto-generated method stub
+		return session.update("Board.boardinquiry", bno);
 	}
+
 
 	
 }

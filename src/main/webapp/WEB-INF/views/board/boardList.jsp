@@ -39,8 +39,8 @@
 						<td width="10%">${board.writer}</td>
 						<td width="10%">${board.regdate}</td>
 						<td width="10%">${board.updatedate}</td> 
-						<%-- <td width="7%" >${board.inview}</td>
-						<td width="7%">${board.recommend} </td> --%>
+						<td width="7%" >${board.inview}</td>
+						<td width="7%">${board.recommend}</td>
 					</tr>
 				</c:forEach> 
 		</table>

@@ -20,6 +20,6 @@ public interface BoardService {
 	
 	public void recommend(BoardVO vo) throws Exception;
 
-	public BoardVO inview(BoardVO vo) throws Exception;
+	public BoardVO inview(int bno) throws Exception;
 }
 	

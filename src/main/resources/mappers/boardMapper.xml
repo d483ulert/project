@@ -57,7 +57,7 @@ WHERE BNO= #{BNO}
 UPDATE BOARD 
 SET
 INQUIRY = NVL(INVIEW,0)+1
-WHERE INVIEW= ${INVIEW}
+WHERE BNO= ${BNO}
 </update>
 
 <delete id="boarddelete" parameterType="int">

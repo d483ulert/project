@@ -27,12 +27,10 @@ public class BoardController {
 	@Autowired
 	BoardService bs;
 	
-	
 	  @ModelAttribute("cp") 
 	  public String getContextPath(HttpServletRequest request) {
 		  return request.getContextPath();
 	  }
-	 
 	
 	@RequestMapping(value = "/list")
 	public String boardList(Model model,BoardVO vo) throws Exception {
@@ -42,10 +40,8 @@ public class BoardController {
 		return "board/boardList";
 	}	
 	
-	@Transactional
 	@RequestMapping("/write")
 	public String boardWrite() throws Exception{
-		
 		return "board/boardWrite";
 	}
 	
@@ -60,7 +56,7 @@ public class BoardController {
 	@RequestMapping(value="/read")
 	public String boardRead(BoardVO vo, Model model,@RequestParam int bno,@RequestParam String inview) throws Exception{
 		BoardVO list= bs.getRead(bno);
-		BoardVO inview1 = bs.inview(inview1);
+		bs.inview(vo);
 		model.addAttribute("board",list); //Don't know how to iterate over supplied "items" in &lt;forEach&gt; list�??��?��?�� list�? 보내줘서 ?��긴문?��
 		return "board/boardRead";
 	}
