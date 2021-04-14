@@ -46,8 +46,8 @@ public class BoardServcieImpl implements BoardService{
 	}
 
 	@Override
-	public BoardVO inview(int bno) throws Exception {
-		return dao.inview(bno);
+	public void inview(int bno) throws Exception {
+		 dao.inview(bno);
 
 	}
 

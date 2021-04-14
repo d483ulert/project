@@ -18,5 +18,5 @@ public interface BoardDAO {
 	
 	public void recommend(BoardVO vo) throws Exception;
 	
-	public BoardVO inview(int bno) throws Exception;
+	public void inview(int bno) throws Exception;
 }

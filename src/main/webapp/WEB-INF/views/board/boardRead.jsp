@@ -31,7 +31,7 @@
 			<tr>				
 				<td width="10%"><span>작성자: </span>${board.writer}</td>
 				<td width="10%">${board.regdate}</td>
-				<td width="10%"><span>조회    </span>${board.inquiry}</td>
+				<td width="10%"><span>조회    </span>${board.inview}</td>
 				<td width="10%"><span>추천     </span>${board.recommend}</td>
 			</tr>
 			<tr>

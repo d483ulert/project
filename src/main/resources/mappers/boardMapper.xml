@@ -12,8 +12,8 @@
 			WRITER,
 			TO_CHAR(REGDATE,'YYYY-MM-DD HH:MI') REGDATE,
 			TO_CHAR(UPDATEDATE,'YYYY-MM-DD HH:MI') UPDATEDATE,
-			RECOMMEND,
-			INVIEW
+			INVIEW,
+			RECOMMEND
 	FROM BOARD
 	ORDER BY BNO DESC
 </select>
@@ -27,6 +27,7 @@
 
 
 <select id ="boardread" resultType="com.my.project.model.BoardVO">
+ /*boardRead*/
 	SELECT 	BNO,
 			TITLE,
 			WRITER,
@@ -38,6 +39,7 @@
 </select>
 
 <update id="recommend" parameterType="com.my.project.model.BoardVO">
+/*recommend*/
 UPDATE BOARD 
 SET
 recommend = recommend+1
@@ -45,6 +47,7 @@ WHERE BNO = #{BNO}
 </update>
 
 <update id="boardupdate" parameterType="com.my.project.model.BoardVO">
+/* boardupdate */
 UPDATE BOARD
 SET
 TITLE = #{TITLE},
@@ -53,11 +56,11 @@ UPDATEDATE = SYSDATE
 WHERE BNO= #{BNO}
 </update>
 
-<update id="boardinquiry" parameterType="com.my.project.model.BoardVO">
+<update id="inview" parameterType="com.my.project.model.BoardVO">
+/* inview */
 UPDATE BOARD 
-SET
-INQUIRY = NVL(INVIEW,0)+1
-WHERE BNO= ${BNO}
+SET INVIEW = INVIEW+1
+WHERE BNO= #{BNO}
 </update>
 
 <delete id="boarddelete" parameterType="int">

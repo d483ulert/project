@@ -32,11 +32,10 @@ public class BoardController {
 		  return request.getContextPath();
 	  }
 	
-	@RequestMapping(value = "/list")
+	@RequestMapping(value="/list")
 	public String boardList(Model model,BoardVO vo) throws Exception {
 		List<BoardVO> list = bs.getList(vo);
 		model.addAttribute("vo", list);
-	
 		return "board/boardList";
 	}	
 	
@@ -54,9 +53,9 @@ public class BoardController {
 	
 	@Transactional
 	@RequestMapping(value="/read")
-	public String boardRead(BoardVO vo, Model model,@RequestParam int bno,@RequestParam String inview) throws Exception{
+	public String boardRead(BoardVO vo, Model model, @RequestParam int bno) throws Exception{
 		BoardVO list= bs.getRead(bno);
-		bs.inview(vo);
+		bs.inview(bno);
 		model.addAttribute("board",list); //Don't know how to iterate over supplied "items" in &lt;forEach&gt; list�??��?��?�� list�? 보내줘서 ?��긴문?��
 		return "board/boardRead";
 	}
@@ -75,12 +74,13 @@ public class BoardController {
 		return "board/boardUpdate";
 	}
 	
-	@Transactional
-	@RequestMapping(value="/recommend", method=RequestMethod.POST)
-	public void boardRecommned(BoardVO vo, Model model,@RequestParam int bno) throws Exception {
-		HashMap<String,String> map = new HashMap<String, String>();
-		System.out.println(map.get("bnoData"));
-		bs.recommend(vo);
-	}
+	/*
+	 * @Transactional
+	 * 
+	 * @RequestMapping(value="/recommend", method=RequestMethod.POST) public void
+	 * boardRecommned(BoardVO vo, Model model,@RequestParam int bno) throws
+	 * Exception { HashMap<String,String> map = new HashMap<String, String>();
+	 * System.out.println(map.get("bnoData")); bs.recommend(vo); }
+	 */
 
 }
