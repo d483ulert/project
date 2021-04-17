@@ -54,8 +54,8 @@ public class BoardController {
 	@Transactional
 	@RequestMapping(value="/read")
 	public String boardRead(BoardVO vo, Model model, @RequestParam int bno) throws Exception{
-		BoardVO list= bs.getRead(bno);
 		bs.inview(bno);
+		BoardVO list= bs.getRead(bno);
 		model.addAttribute("board",list); //Don't know how to iterate over supplied "items" in &lt;forEach&gt; list�??��?��?�� list�? 보내줘서 ?��긴문?��
 		return "board/boardRead";
 	}

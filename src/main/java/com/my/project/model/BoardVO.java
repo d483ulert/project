@@ -21,7 +21,7 @@ public class BoardVO {
 	public int getInview() {
 		return inview;
 	}
-	public void setInview(int setInview) {
+	public void setInview(int setInview, int inview) {
 		this.inview = inview;
 	}
 	
