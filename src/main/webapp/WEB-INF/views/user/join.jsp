@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.css"/>
 <title>BOARD</title>
-</head>
+</head>  
 <body>
 	<div class="container">
 		<nav class="navbar navbar-light" style="background-color: #e3f2fd;">

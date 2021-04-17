@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.css"/>
 <title>BOARD</title>
 </head>
-<body>
+<body>  
 	<div class="container">
 		<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
 			<a class="navbar-brand" href="/board/list">공지사항</a>		

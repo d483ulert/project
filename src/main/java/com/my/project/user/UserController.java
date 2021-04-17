@@ -23,7 +23,7 @@ public class UserController {
 	
 	@RequestMapping("/login")
 	public String Login() {
-		
+		 
 		return "user/login";
 	}
 	
