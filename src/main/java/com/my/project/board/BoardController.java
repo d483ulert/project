@@ -59,6 +59,7 @@ public class BoardController {
 		model.addAttribute("board",list); //Don't know how to iterate over supplied "items" in &lt;forEach&gt; list�??��?��?�� list�? 보내줘서 ?��긴문?��
 		return "board/boardRead";
 	}
+	
 	@Transactional
 	@RequestMapping(value="/delete")
 	public String boardDelete(Model model,@RequestParam int bno) throws Exception{

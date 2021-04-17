@@ -16,8 +16,8 @@
 	<div class="container">
 		<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
 			<a class="navbar-brand" href="/board/list">공지사항</a>		
-			<a class="navbar-brand" href="#">Navbar</a>		
-			<a class="navbar-brand" href="#">Navbar</a>		
+			<a class="navbar-brand" href="/user/login">로그인</a>		
+			<a class="navbar-brand" href="/user/join">회원가입</a>		
 			<a class="navbar-brand" href="#">Navbar</a>		
 		</nav>
 	</div><br>
