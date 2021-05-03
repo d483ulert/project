@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="Board">
+<select id ="boardlist" resultType="com.my.project.model.BoardVO">
+ /*boardList*/
+	SELECT 	BNO,
+			TITLE,
+			CONTENT,
+			WRITER,
+			TO_CHAR(REGDATE,'YYYY-MM-DD HH:MI') REGDATE,
+			TO_CHAR(UPDATEDATE,'YYYY-MM-DD HH:MI') UPDATEDATE,
+			INVIEW,
+			RECOMMEND
+	FROM BOARD
+	ORDER BY BNO DESC
+</select>
+
+<insert id="boardwrite" >
+  /*boardWrite*/
+	INSERT INTO BOARD
+	(BNO,TITLE,WRITER,CONTENT,REGDATE,UPDATEDATE)
+	VALUES(SEQ_BNO.NEXTVAL,#{title},#{writer},#{content},SYSDATE,SYSDATE)
+</insert> 
+
+
+<select id ="boardread" resultType="com.my.project.model.BoardVO">
+ /*boardRead*/
+	SELECT 	BNO,
+			TITLE,
+			WRITER,
+			CONTENT,
+			TO_CHAR(REGDATE,'YYYY-MM-DD HH:MI') REGDATE,
+			RECOMMEND,
+			INVIEW 
+	FROM BOARD WHERE BNO = #{BNO}
+</select>
+
+<update id="recommend" parameterType="com.my.project.model.BoardVO">
+/*recommend*/
+UPDATE BOARD 
+SET
+recommend = recommend+1
+WHERE BNO = #{BNO}
+</update>
+
+<update id="boardupdate" parameterType="com.my.project.model.BoardVO">
+/* boardupdate */
+UPDATE BOARD
+SET
+TITLE = #{TITLE},
+CONTENT = #{CONTENT},
+UPDATEDATE = SYSDATE
+WHERE BNO= #{BNO}
+</update>
+
+<update id="inview" parameterType="com.my.project.model.BoardVO">
+/* inview */
+UPDATE BOARD 
+SET INVIEW = INVIEW+1
+WHERE BNO= #{BNO}
+</update>
+
+<delete id="boarddelete" parameterType="int">
+DELETE FROM BOARD WHERE BNO =#{BNO}
+</delete>
+</mapper>
+

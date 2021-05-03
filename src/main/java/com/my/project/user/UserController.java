@@ -14,6 +14,13 @@ public class UserController {
 		return "user/join";
 	}
 	
+	@RequestMapping("/admin")
+	public String Admin() {
+		
+		return "user/join";
+
+		
+	}
 	
 	@RequestMapping("/userAdd")
 	public void UserAdd() {
